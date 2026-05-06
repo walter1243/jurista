@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-cream: #f3efe5;
+  --bg-clay: #e4d4bc;
+  --paper: #fffaf1;
+  --ink: #23211d;
+  --accent: #a7341d;
+  --accent-soft: #dd8a3a;
+  --muted: #6f665c;
+  --ok: #2f7c54;
+  --warn: #bd5f21;
+  --radius: 16px;
+  --shadow: 0 14px 35px rgba(85, 53, 27, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(167, 52, 29, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 90% 0%, rgba(221, 138, 58, 0.15) 0%, transparent 35%),
+    linear-gradient(140deg, var(--bg-cream), var(--bg-clay));
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #fbf4e6, #f6ead2);
+  box-shadow: var(--shadow);
+  animation: reveal 0.6s ease;
+}
+
+.eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1.08;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  max-width: 640px;
+  color: var(--muted);
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.kpis article {
+  background: var(--paper);
+  border: 1px solid rgba(35, 33, 29, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.kpis p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.kpis strong {
+  font-size: 1.08rem;
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid rgba(35, 33, 29, 0.1);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  animation: reveal 0.7s ease;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(35, 33, 29, 0.2);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid rgba(167, 52, 29, 0.25);
+  border-color: var(--accent);
+}
+
+button {
+  border: none;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(110deg, var(--accent), var(--accent-soft));
+  cursor: pointer;
+}
+
+.large {
+  grid-column: span 1;
+}
+
+.debt-form {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.debt-form .full {
+  grid-column: 1 / -1;
+}
+
+.table-card {
+  margin-top: 16px;
+}
+
+.table-header {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid rgba(35, 33, 29, 0.12);
+  font-size: 0.92rem;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.badge.pending {
+  background: #f9e5ba;
+  color: #795400;
+}
+
+.badge.partial {
+  background: #dce8f8;
+  color: #215083;
+}
+
+.badge.paid {
+  background: #d6f1e4;
+  color: var(--ok);
+}
+
+.badge.overdue {
+  background: #ffd8c9;
+  color: var(--warn);
+}
+
+.status {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+footer {
+  margin: 28px 0 12px;
+  color: var(--muted);
+}
+
+@media (min-width: 920px) {
+  .hero {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: end;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .large {
+    grid-column: span 2;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
