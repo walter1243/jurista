@@ -3,7 +3,7 @@ import Decimal from 'decimal.js';
 import dayjs from 'dayjs';
 import express, { type Request, type Response } from 'express';
 import { z } from 'zod';
-import crypto from 'node:crypto';
+import { randomUUID } from 'crypto';
 
 // ────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -73,7 +73,7 @@ function nowISO() {
   return new Date().toISOString();
 }
 function uid() {
-  return crypto.randomUUID();
+  return randomUUID();
 }
 
 // ────────────────────────────────────────────────────────────────────────────
