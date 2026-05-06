@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "concurrently -n API,WEB -c red,blue \"npm run dev:api\" \"npm run dev:frontend\"",
     "dev:api": "tsx watch api/index.ts",
-    "dev:frontend": "cd frontend && vite --host"
+    "dev:frontend": "npm --prefix frontend run dev -- --host"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "cors": "^2.8.6",
     "dayjs": "^1.11.20",
     "decimal.js": "^10.6.0",
