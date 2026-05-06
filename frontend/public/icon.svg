@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d47a1"/>
+      <stop offset="100%" stop-color="#0a2e6e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="50%" stop-color="#f9a825"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" ry="110" fill="url(#bg)"/>
+  <circle cx="176" cy="320" r="76" fill="url(#gold)"/>
+  <circle cx="176" cy="320" r="76" fill="none" stroke="#ffd54f" stroke-width="8"/>
+  <text x="176" y="340" text-anchor="middle" font-size="70" font-family="Arial" font-weight="bold" fill="#0d47a1">R$</text>
+  <circle cx="340" cy="390" r="58" fill="url(#gold)"/>
+  <circle cx="340" cy="390" r="58" fill="none" stroke="#ffd54f" stroke-width="6"/>
+  <text x="340" y="408" text-anchor="middle" font-size="52" font-family="Arial" font-weight="bold" fill="#0d47a1">R$</text>
+  <circle cx="176" cy="148" r="42" fill="url(#gold)"/>
+  <polyline points="176,148 270,200 370,118 430,138" fill="none" stroke="#ffd54f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="430,100 465,178 395,178" fill="#ffd54f"/>
+</svg>
